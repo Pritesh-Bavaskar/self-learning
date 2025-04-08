@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
-  // Handle scroll for transparent/solid navbar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -23,7 +21,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isMobileMenuOpen
+          ? "bg-white shadow-md text-black"
+          : isScrolled
           ? "bg-white shadow-md text-black"
           : "bg-transparent text-white"
       }`}
@@ -100,32 +100,38 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-2">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="hover:opacity-75 transition-opacity py-2">
+              <Link
+                to="/"
+                className="hover:opacity-75 transition-opacity py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Home
               </Link>
               <Link
                 to="/about"
                 className="hover:opacity-75 transition-opacity py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="/team"
                 className="hover:opacity-75 transition-opacity py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Team
               </Link>
               <Link
                 to="/login"
                 className="hover:opacity-75 transition-opacity py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Login
               </Link>
               <Link
                 to="/signup"
-                className={`px-4 py-2 rounded transition text-center ${
-                  isScrolled ? "bg-black text-white" : "bg-white text-black"
-                }`}
+                className="px-4 py-2 rounded transition text-center bg-black text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sign Up
               </Link>

@@ -10,10 +10,12 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import AuthRoute from "./components/AuthRoute";
 import CatDashboardPage from "./pages/CatDashboardPage";
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
