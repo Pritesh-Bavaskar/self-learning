@@ -17,7 +17,22 @@ module.exports = {
           "sans-serif",
         ],
       },
+      colors: {
+        cat: {
+          quant: '#3B82F6', // blue
+          varc: '#8B5CF6',  // purple
+          lrdi: '#10B981'   // green
+        }
+      },
+      spacing: {
+        '128': '32rem',
+      }
     },
+  },
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+    }
   },
   plugins: [],
 };

@@ -8,6 +8,8 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
+import AuthRoute from "./components/AuthRoute";
+import CatDashboardPage from "./pages/CatDashboardPage";
 
 function App() {
   return (
@@ -17,11 +19,21 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route
+              path="/cat-dashboard"
+              element={
+                <AuthRoute>
+                  <CatDashboardPage />
+                </AuthRoute>
+              }
+            />
           </Routes>
         </main>
         <Footer />
