@@ -1,8 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
+import { jwtDecode } from "jwt-decode";
 
 const Hero = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    checkAuthStatus();
+  }, [location]);
+
+  const checkAuthStatus = () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        const isExpired = decoded.exp * 1000 < Date.now();
+        setIsAuthenticated(!isExpired);
+      } catch (error) {
+        console.error("Invalid token:", error);
+        localStorage.removeItem("token");
+        setIsAuthenticated(false);
+      }
+    } else {
+      setIsAuthenticated(false);
+    }
+  };
+
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
       {/* Background pattern overlay */}
@@ -23,14 +48,16 @@ const Hero = () => {
         <p className="text-xl text-gray-300 mb-12">
           Crack CAT and other OMETs (small Intro)
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link to="/login">
-            <Button text="LOGIN" variant="primary" />
-          </Link>
-          <Link to="/signup">
-            <Button text="SIGN UP" variant="secondary" />
-          </Link>
-        </div>
+        {!isAuthenticated && (
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link to="/login">
+              <Button text="LOGIN" variant="primary" />
+            </Link>
+            <Link to="/signup">
+              <Button text="SIGN UP" variant="secondary" />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
