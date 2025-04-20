@@ -13,7 +13,7 @@ const ImageWithText = ({
   const imageElement = (
     <div className="w-full lg:w-1/2">
       <img
-        src={image || "/api/placeholder/400/320"}
+        src={image}
         alt={title}
         className="w-full h-auto object-cover"
       />

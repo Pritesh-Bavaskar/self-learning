@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { jwtDecode } from "jwt-decode";
-
+import landing_img from "../assets/landingPage/landing_bck.webp";
 const Hero = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const location = useLocation();
@@ -29,24 +29,22 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Background pattern overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-800 z-0">
-        <div className="absolute inset-0 opacity-20">
-          {/* This would be your pattern/texture - represented with diagonal stripes */}
-          <div
-            className="w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.5)_25%,rgba(68,68,68,.5)_50%,transparent_50%,transparent_75%,rgba(68,68,68,.5)_75%)]"
-            style={{ backgroundSize: "100px 100px" }}
-          ></div>
-        </div>
-      </div>
-
+    <div
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${landing_img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="container mx-auto px-6 z-10 text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          Self Learning Platform Name.
+          Crack Exams, Your Way.
         </h1>
         <p className="text-xl text-gray-300 mb-12">
-          Crack CAT and other OMETs (small Intro)
+          Self-paced learning, mentor-guided seminars, and curated challenges
+          for CAT & OMETs.
         </p>
         {!isAuthenticated && (
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

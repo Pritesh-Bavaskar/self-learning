@@ -3,26 +3,26 @@ import Hero from "../components/Hero";
 import MissionStatement from "../components/MissionStatement";
 import ImageWithText from "../components/ImageWithText";
 import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
-
+import landing_about from "../assets/landingPage/landing_about.webp"
+import landing_teams from "../assets/landingPage/landing_teams.webp"
 const HomePage = () => {
   // Placeholder data
   const aboutUsData = {
     subtitle: "ABOUT",
-    title: "Why choose us?",
+    title: "Why Choose Us?",
     description:
-      "Nulla vel sodales tellus, quis condimentum enim. Nunc porttitor venenatis feugiat. Etiam quis faucibus erat, non accumsan leo. Aliquam erat volutpat. Vestibulum ac faucibus eros. Cras ullamcorper gravida tellus ut consequat.",
-    image: "/api/placeholder/400/320",
+      "We’re not a typical coaching institute. We’re a learning ecosystem designed for self-driven aspirants. Whether you want to study alone, solve handpicked advanced problems, or just attend a few game-changing seminars — we give you the flexibility, focus, and mentorship that’s often missing in conventional coaching setups.",
+    image: landing_about,
   };
 
   const teamData = {
     subtitle: "TEAM",
-    title: "How we will help you to succeed?",
+    title: "How Will We Help You Succeed?",
     description:
-      "Nulla vel sodales tellus, quis condimentum enim. Nunc porttitor venenatis feugiat. Etiam quis faucibus erat, non accumsan leo. Aliquam erat volutpat. Vestibulum ac faucibus eros. Cras ullamcorper gravida tellus ut consequat.",
+      "By offering challenge-driven learning, data-backed analytics, and optional mentor-led sessions—we make sure you focus on what actually matters. No distractions, no forced modules. Just a tailored journey toward your target B-school.",
     buttonText: "LEARN MORE",
     buttonLink: "/team",
-    image: "/api/placeholder/400/320",
+    image: landing_teams,
   };
 
   return (
@@ -51,7 +51,6 @@ const HomePage = () => {
 
       <CallToAction />
 
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -6,16 +6,22 @@ const MissionStatement = () => {
       <div className="container mx-auto">
         <div className="text-center">
           <p className="uppercase text-gray-500 tracking-wider text-sm mb-8">
-            OUR MISSION: HELPING YOU ACHIEVE YOUR DREAM B-SCHOOL
+            OUR MISSION: GUIDING SELF-LEARNERS TO B-SCHOOL SUCCESS
           </p>
 
           <h2 className="text-3xl md:text-4xl font-medium mx-auto max-w-4xl leading-tight">
-            Cracking CAT & OMETs isn't just about hard work— it's about the{" "}
-            <span className="font-bold">right approach</span>. Our goal is to
+            Cracking CAT & OMETs isn’t just about hard work — it’s about making
+            the right moves.{" "}
+            {/* <span className="font-bold">right approach</span>. Our goal is to
             give you a <span className="font-bold">smarter, data-driven</span>,
             and <span className="font-bold">mentor-backed</span>
             study plan that adapts to your needs, ensuring you reach your full
-            potential
+            potential */}
+            With <span className="font-bold">targeted practice</span>,{" "}
+            <span className="font-bold">selective mentorship</span>, and{" "}
+            <span className="font-bold">flexible learning </span>, we help
+            driven learners like you reach top B-schools without the fluff of
+            full-time coaching.
           </h2>
         </div>
 
