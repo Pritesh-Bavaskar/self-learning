@@ -1,53 +1,60 @@
 import React from "react";
-import Button from "../components/Button";
+import CallToAction from "../components/CallToAction";
+import about_us_banner from "../assets/aboutUsPage/about_us_banner.webp";
 
 const AboutPage = () => {
   const services = [
     {
-      title: "Support",
+      title: "Doubt Support",
       description:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts",
+        "Get your questions answered by mentors from IIMs, but only when you need them — no hand-holding, just clarity.",
     },
     {
-      title: "Strategy",
+      title: "Strategic Preparation",
       description:
-        "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life",
+        "We help you focus on what matters: topic-wise challenge sets, past patterns, and time-efficient problem-solving.",
     },
     {
-      title: "Management",
+      title: "Progress Tracking",
       description:
-        "Blind texts it is an almost unorthographic life One day however a small line of blind text by the name",
+        "Visual dashboards and smart analytics to track your strengths, weaknesses, and weekly goals.",
     },
     {
-      title: "Training",
+      title: "Mentorship Seminars",
       description:
-        "Blind texts it is an almost unorthographic life One day however a small line of blind text by the name",
+        "Weekly mentor-led sessions focused on problem-solving techniques, exam hacks, and strategy deep dives.",
     },
     {
-      title: "Consulting",
+      title: "Curated Question Bank",
       description:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts",
+        "High-quality CAT & OMET-level questions designed for serious learners — no fluff, just depth.",
     },
     {
-      title: "Events",
+      title: "Flexible Learning",
       description:
-        "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life",
+        "Study at your pace, unlock new challenges weekly, and build consistency without the chaos of traditional coaching.",
     },
   ];
 
   return (
     <div className="bg-white">
       {/* Hero Banner Section */}
-      <section className="relative py-32 md:py-40 bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+      <section
+        className="relative py-32 md:py-40 bg-gray-900 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${about_us_banner})`,
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               About Us
             </h1>
             <p className="text-xl md:text-2xl text-gray-300">
-              We're a group of creative thinkers who have built a business to
-              change the world.
+              We’re a team of passionate learners, mentors, and builders —
+              helping serious aspirants crack CAT & OMETs their own way.
             </p>
           </div>
         </div>
@@ -59,36 +66,30 @@ const AboutPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <p className="text-2xl md:text-3xl font-medium text-gray-800 mb-8">
-                We're a group of creative thinkers who have built a business to
-                change the world.
+                We believe self-learners deserve better tools, better
+                challenges, and better guidance — without the burden of
+                full-time coaching.
               </p>
 
               <div className="space-y-6 text-gray-600">
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean. A small river named
-                  Duden flows by their place and supplies it with the necessary
-                  regelialia. It is a paradisematic country, in which roasted
-                  parts of sentences fly into your mouth.
+                  Our mission is to create a focused learning environment for
+                  CAT & OMET aspirants who want to take control of their prep.
+                  We combine high-quality practice sets, selective mentor
+                  support, and live problem-solving seminars — so you only get
+                  help when you need it.
                 </p>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind
-                  texts it is an almost unorthographic life One day however a
-                  small line of blind text by the name of Lorem Ipsum decided to
-                  leave for the far World of Grammar. The Big Oxmox advised her
-                  not to do so, because there were thousands of bad Commas, wild
-                  Question Marks and devious Semikoli, but the Little Blind Text
-                  didn't listen.
+                  You don’t need 5-hour classes or endless modules. You need
+                  curated questions, analytical insights, and a push from the
+                  right mentor at the right moment. That’s what we deliver — in
+                  a lean, effective format.
                 </p>
                 <p>
-                  She packed her seven versalia, put her initial into the belt
-                  and made herself on the way. When she reached the first hills
-                  of the Italic Mountains, she had a last view back on the
-                  skyline of her hometown Bookmarksgrove, the headline of
-                  Alphabet Village and the subline of her own road, the Line
-                  Lane.
+                  We’re not just educators — we’re fellow aspirants, engineers,
+                  and dreamers who’ve walked this road. Whether you’re aiming
+                  for the IIMs or top OMET schools, we’re here to guide and
+                  challenge you — on your terms.
                 </p>
               </div>
             </div>
@@ -123,7 +124,8 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gray-100">
+      <CallToAction />
+      {/* <section className="py-16 md:py-24 bg-gray-100">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -142,7 +144,7 @@ const AboutPage = () => {
             <p className="mt-12 text-gray-500 text-sm">Powered by Webflow</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
