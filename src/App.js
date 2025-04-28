@@ -30,7 +30,7 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route
-              path="/cat-dashboard"
+              path="/courses/cat"
               element={
                 <AuthRoute>
                   <CatDashboardPage />

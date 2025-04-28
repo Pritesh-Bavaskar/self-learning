@@ -77,14 +77,14 @@ const Footer = () => {
                   MAT Preparation
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/courses/gmat"
                   className="text-gray-600 hover:text-gray-900"
                 >
                   GMAT Preparation
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

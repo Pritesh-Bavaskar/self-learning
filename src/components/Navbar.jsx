@@ -72,9 +72,9 @@ const Navbar = () => {
             <Link to="/contact" className="hover:opacity-75 transition-opacity">
               Contact
             </Link>
-            <Link to="/team" className="hover:opacity-75 transition-opacity">
+            {/* <Link to="/team" className="hover:opacity-75 transition-opacity">
               Team
-            </Link>
+            </Link> */}
 
             {isAuthenticated ? (
               <div className="relative group inline-block">

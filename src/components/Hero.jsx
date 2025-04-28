@@ -49,11 +49,11 @@ const Hero = () => {
         {!isAuthenticated && (
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/login">
-              <Button text="LOGIN" variant="primary" />
+              <Button text="START YOUR PREP" variant="primary" />
             </Link>
-            <Link to="/signup">
+            {/* <Link to="/signup">
               <Button text="SIGN UP" variant="secondary" />
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>
