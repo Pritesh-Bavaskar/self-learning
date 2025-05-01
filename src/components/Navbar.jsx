@@ -72,47 +72,89 @@ const Navbar = () => {
             <Link to="/contact" className="hover:opacity-75 transition-opacity">
               Contact
             </Link>
-            {/* <Link to="/team" className="hover:opacity-75 transition-opacity">
-              Team
-            </Link> */}
+            {isAuthenticated ? (
+              <div className="relative group inline-block">
+                <button className="flex items-center space-x-1 focus:outline-none">
+                  Prepare
+                  {/* <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"> */}
+                  {/* <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-gray-700"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg> */}
+                  {/* </div> */}
+                </button>
+
+                {/* Dropdown menu */}
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-400">
+                  <Link
+                    to="/courses/cat"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    CAT
+                  </Link>
+                  <Link
+                    to="/courses/xat"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    XAT
+                  </Link>
+                  <Link
+                    to="/courses/mat"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    MAT
+                  </Link>
+                </div>
+              </div>
+            ) : null}
 
             {isAuthenticated ? (
               <div className="relative group inline-block">
-              <button className="flex items-center space-x-1 focus:outline-none">
-                <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-700"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-              </button>
-            
-              {/* Dropdown menu */}
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-400">
-                <Link
-                  to="/profile"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  Profile
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  Logout
+                <button className="flex items-center space-x-1 focus:outline-none">
+                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-gray-700"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
+                  </div>
                 </button>
+
+                {/* Dropdown menu */}
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-400">
+                  <Link
+                    to="/profile"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    Profile
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    Logout
+                  </button>
+                </div>
               </div>
-            </div>            
             ) : (
               <div className="flex items-center space-x-4">
                 <Link
@@ -181,16 +223,30 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
-                to="/team"
-                className="hover:opacity-75 transition-opacity py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Team
-              </Link>
 
               {isAuthenticated ? (
                 <>
+                  <Link
+                    to="/courses/cat"
+                    className="hover:opacity-75 transition-opacity py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    CAT
+                  </Link>
+                  <Link
+                    to="/courses/xat"
+                    className="hover:opacity-75 transition-opacity py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    XAT
+                  </Link>
+                  <Link
+                    to="/courses/mat"
+                    className="hover:opacity-75 transition-opacity py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    MAT
+                  </Link>
                   <Link
                     to="/profile"
                     className="hover:opacity-75 transition-opacity py-2"

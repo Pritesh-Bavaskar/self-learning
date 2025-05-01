@@ -12,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 import AuthRoute from "./components/AuthRoute";
 import CatDashboardPage from "./pages/CatDashboardPage";
 import ScrollToTop from './components/ScrollToTop';
+import QAPage from "./pages/QAPage";
 
 function App() {
   return (
@@ -34,6 +35,14 @@ function App() {
               element={
                 <AuthRoute>
                   <CatDashboardPage />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/courses/cat/problem-solving"
+              element={
+                <AuthRoute>
+                  <QAPage />
                 </AuthRoute>
               }
             />
