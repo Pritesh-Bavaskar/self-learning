@@ -13,6 +13,8 @@ import AuthRoute from "./components/AuthRoute";
 import CatDashboardPage from "./pages/CatDashboardPage";
 import ScrollToTop from './components/ScrollToTop';
 import QAPage from "./pages/QAPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   return (
@@ -23,13 +25,13 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            <Route path="/team" element={<TeamPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route
               path="/courses/cat"
               element={
@@ -46,6 +48,8 @@ function App() {
                 </AuthRoute>
               }
             />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
         <Footer />

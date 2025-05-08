@@ -154,10 +154,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-100 text-center text-sm text-gray-500">
           <p>© {currentYear} SelfPrepare. All rights reserved.</p>
           <div className="flex justify-center mt-2 space-x-6">
-            <Link to="/privacy" className="hover:text-gray-900">
+            <Link to="/privacy-policy" className="hover:text-gray-900">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="hover:text-gray-900">
+            <Link to="/terms-of-service" className="hover:text-gray-900">
               Terms of Service
             </Link>
           </div>
