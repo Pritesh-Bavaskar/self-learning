@@ -72,6 +72,9 @@ const Navbar = () => {
             <Link to="/contact" className="hover:opacity-75 transition-opacity">
               Contact
             </Link>
+            <Link to="/payment" className="hover:opacity-75 transition-opacity">
+              Plans & Pricing
+            </Link>
             {isAuthenticated ? (
               <div className="relative group inline-block">
                 <button className="flex items-center space-x-1 focus:outline-none">

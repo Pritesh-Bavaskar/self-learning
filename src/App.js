@@ -11,10 +11,11 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import AuthRoute from "./components/AuthRoute";
 import CatDashboardPage from "./pages/CatDashboardPage";
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from "./components/ScrollToTop";
 import QAPage from "./pages/QAPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   return (
@@ -30,8 +31,14 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route
+              path="/payment"
+              element={
+                <AuthRoute>
+                  <PaymentPage />
+                </AuthRoute>
+              }
+            />
             <Route
               path="/courses/cat"
               element={

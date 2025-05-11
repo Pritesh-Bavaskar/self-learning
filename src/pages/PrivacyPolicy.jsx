@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
   const supportEmail = 'support@aceit.com';
 
   return (
-    <div className="privacy-policy container mx-auto max-w-4xl">
+    <div className="privacy-policy container mx-auto px-4 max-w-4xl">
       <div className="w-screen bg-gray-900 text-white py-8 mb-6 -mx-[50vw] left-[50%] relative">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-center pt-12">Privacy Policy</h1>

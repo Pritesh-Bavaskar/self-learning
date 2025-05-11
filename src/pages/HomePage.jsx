@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import MissionStatement from "../components/MissionStatement";
 import ImageWithText from "../components/ImageWithText";
 import CallToAction from "../components/CallToAction";
+import Payment from "../components/Payment";
 import landing_about from "../assets/landingPage/landing_about.webp"
 import landing_teams from "../assets/landingPage/landing_teams.webp"
 const HomePage = () => {
@@ -39,15 +40,7 @@ const HomePage = () => {
         imageOnLeft={true}
       />
 
-      <ImageWithText
-        image={teamData.image}
-        title={teamData.title}
-        subtitle={teamData.subtitle}
-        description={teamData.description}
-        buttonText={teamData.buttonText}
-        buttonLink={teamData.buttonLink}
-        imageOnLeft={false}
-      />
+      <ImageWithText {...teamData} imageRight={true} />
 
       <CallToAction />
 
